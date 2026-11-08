@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f7f8f4">
+<title>FormLab · 健身动作图鉴</title>
+<meta name="description" content="按器械、训练部位与难度查找健身动作，用 360° 动画观察从站立到完成一次动作的全过程，查看目标肌群与姿势要点。">
+<link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css?v=0dc8cb569f">
+<script defer src="exercises.js?v=ac5b2ed9ac"></script><script defer src="library-additions.js?v=0ed7ef83e2"></script><script id="viewer-assets" type="application/json">["poses.js?v=e460608970", "motion.js?v=176710a6d9", "floor-moves.js?v=98e5d7d746", "bodyweight-moves.js?v=32d7c6a04b", "weighted-moves.js?v=54f7d58e04", "coaching.js?v=4804fd1347", "athlete-surface.js?v=36194b3125", "athlete-model.js?v=76f9267f74", "hands.js?v=84bec461ea", "athlete.js?v=7abc41ad2e", "model-gl.js?v=0112730859"]</script>
+<script defer src="app.js?v=4dd3299447"></script>
+</head>
+<body>
+<a href="#main" class="skip">跳至内容</a>
+<header class="topbar"><div class="bar-inner">
+<a class="brand" href="#library" aria-label="FormLab 动作库"><img src="assets/mark.svg" alt="" width="33" height="33"><b>FORM<span>LAB</span></b><span class="brand-cn">动作图鉴</span></a>
+<nav aria-label="主导航"><a id="nav-library" href="#library"><i data-icon="grid"></i>动作库</a><a id="nav-saved" href="#saved"><i data-icon="bookmark"></i>我的收藏</a></nav>
+<form class="searchbox" id="search-form" role="search"><i data-icon="search"></i><input id="search" type="search" autocomplete="off" placeholder="搜索动作、肌群…" aria-label="搜索动作或肌群"><kbd>/</kbd></form>
+</div></header>
+<main id="main" tabindex="-1"><div id="library" class="container">
+<section id="catalog" aria-labelledby="catalog-title">
+<div class="section-heading"><div class="section-title"><span class="section-marker" aria-hidden="true"></span><h1 id="catalog-title">动作库</h1><span id="catalog-en" class="section-en">EXERCISE LIBRARY</span></div><div class="view-switch" aria-label="视图"><button type="button" id="grid-view" title="网格视图" aria-label="网格视图" aria-pressed="true"><i data-icon="grid"></i></button><button type="button" id="list-view" title="列表视图" aria-label="列表视图" aria-pressed="false"><i data-icon="list"></i></button></div></div>
+<div class="catalog-layout"><button id="filter-scrim" class="scrim" aria-label="关闭筛选" hidden></button>
+<aside id="filters" aria-label="筛选条件"><div class="filter-title"><span><i data-icon="sliders"></i>筛选条件</span><button id="reset" class="reset">重置</button><button id="filter-x" class="iconbtn" aria-label="关闭筛选"><i data-icon="x"></i></button></div><div id="filter-groups"></div><button id="filter-apply" class="solid-btn">查看结果</button></aside>
+<div class="results"><div class="results-heading"><div id="results-count" aria-live="polite"></div><div class="result-tools"><button class="mobile-filter" id="mobile-filter"><i data-icon="sliders"></i>筛选</button><label class="sort"><i data-icon="sort"></i><select id="sort" aria-label="动作排序"><option value="default">默认排序</option><option value="easy">难度从低到高</option><option value="name">名称拼音排序</option></select><i data-icon="chevron-down"></i></label></div></div><div id="cards" class="cards"></div></div>
+</div></section></div><div id="observer" class="container" hidden></div></main>
+<div class="toast" id="toast" role="status"></div>
+</body></html>
